@@ -59,23 +59,25 @@ nav .top .shopping-cart {
 }
 
 nav .down {
-  text-align: center;
+  margin-inline: auto;
 
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 80%;
 }
 
 nav .down span {
   position: absolute;
   display: flex;
-  left: 10%;
+  left: .5rem;
 }
 
 nav .down input {
-  width: 85%;
+  width: 100%;
   padding: 0.55rem 2rem;
 }
 
@@ -133,4 +135,14 @@ body.menu-expanded .menu {
 .menu ul li a {
   color: var(--secondary-color);
   text-decoration: none;
+}
+
+
+/*===== RESPONSIVIDADE ==================================*/
+@media (min-width: 1024px) {
+  .close-menu, .open-menu {
+    display: none;
+  }
+
+  
 }
