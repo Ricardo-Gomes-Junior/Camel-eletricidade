@@ -31,13 +31,29 @@ header .top {
 }
 
 header .top .logo {
-  width: 7.8rem;
+  width: 7rem;
 }
 
 header .top .shopping-cart {
-  width: 3.5rem;
+  width: 2.5rem;
 }
 
 header .down{
   text-align: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .down span {
+  position: absolute;
+  left: 2rem;
+}
+
+header .down input {
+  width: 85%;
+  padding: .55rem 2rem;
 }
