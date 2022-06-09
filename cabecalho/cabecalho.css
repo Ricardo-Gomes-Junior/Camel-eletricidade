@@ -11,8 +11,8 @@
   --bg-grey: hsl(229, 19%, 22%);
 }
 
-/*===== HEADER ==================================*/
-header {
+/*===== NAVIGATION ==================================*/
+nav {
   height: 10rem;
   width: 100%;
 
@@ -22,7 +22,7 @@ header {
   background-color: var(--bg-grey);
 }
 
-header .top {
+nav .top {
   margin-block: 1rem;
 
   display: flex;
@@ -30,15 +30,15 @@ header .top {
   justify-content: space-around;
 }
 
-header .top .logo {
+nav .top .logo {
   width: 7rem;
 }
 
-header .top .shopping-cart {
+nav .top .shopping-cart {
   width: 2.5rem;
 }
 
-header .down{
+nav .down{
   text-align: center;
 
   position: relative;
@@ -48,12 +48,12 @@ header .down{
   justify-content: center;
 }
 
-header .down span {
+nav .down span {
   position: absolute;
   left: 2rem;
 }
 
-header .down input {
+nav .down input {
   width: 85%;
   padding: .55rem 2rem;
 }
