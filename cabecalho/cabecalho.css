@@ -1,0 +1,43 @@
+/*===== GERAL ==================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size: 62.5%;
+
+  --bg-grey: hsl(229, 19%, 22%);
+}
+
+/*===== HEADER ==================================*/
+header {
+  height: 10rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--bg-grey);
+}
+
+header .top {
+  margin-block: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header .top .logo {
+  width: 7.8rem;
+}
+
+header .top .shopping-cart {
+  width: 3.5rem;
+}
+
+header .down{
+  text-align: center;
+}
