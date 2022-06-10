@@ -1,0 +1,128 @@
+/* === GERAL ================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-primary-color: hsl(180, 8%, 92%);
+  --white-color: hsl(0, 0%, 95%);
+  --black-color: hsl(0, 0%, 5%);
+  --gray-color: hsl(229, 19%, 22%);
+  --orange-color: hsl(39, 96%, 48%);
+}
+
+body {
+  background-color: var(--bg-primary-color);
+
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* === NAVIGATION HISTORIC ================================*/
+.historic {
+  color: var(--gray-color);
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+
+  margin-block: 2rem;
+}
+
+/* === HEADER ================================*/
+header {
+  background-color: var(--white-color);
+
+  padding: 2rem;
+}
+
+header h1 {
+  color: var(--black-color);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+
+  margin-bottom: 2rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+/* === SUB-CATEGORIES NAVIGATION ================================*/
+nav {
+  margin: 3.2rem auto 6.5rem;
+  width: fit-content;
+  padding-inline: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 4rem;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+nav ul a {
+  color: var(--orange-color);
+}
+
+/* === PRODUCTS ================================*/
+main {
+  display: grid;
+  grid-template-areas: 'A B';
+}
+
+main ul {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.product-img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: .5rem;
+  background-color: #d7d7d7;
+}
+
+main ul a {
+  color: var(--black-color);
+  text-align: center;
+}
+
+main ul li p.product-name {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
+main ul a li p.price {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}

@@ -6,13 +6,13 @@
 }
 
 :root {
-  --font-size: 62.5%;
+  font-size: 62.5%;
 
   --primary-color: hsl(229, 19%, 22%);
   --secondary-color: hsl(0, 0%, 95%);
   --tertiary-color: hsl(39, 96%, 48%);
 
-  --nav-height: 10rem;
+  --nav-height: 13rem;
 }
 
 body {
@@ -51,11 +51,11 @@ nav .top {
 }
 
 nav .top .logo {
-  width: 7rem;
+  width: 8rem;
 }
 
 nav .top .shopping-cart {
-  width: 2.5rem;
+  width: 3.5rem;
 }
 
 nav .down {
@@ -73,12 +73,12 @@ nav .down {
 nav .down span {
   position: absolute;
   display: flex;
-  left: .5rem;
+  left: 1rem;
 }
 
 nav .down input {
   width: 100%;
-  padding: 0.55rem 2rem;
+  padding: 0.6rem 5rem;
 }
 
 /*===== MENU EXPANDED ==================================*/
@@ -128,7 +128,7 @@ body.menu-expanded .menu {
   padding-block: 5rem;
 
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 3rem;
 }
 
