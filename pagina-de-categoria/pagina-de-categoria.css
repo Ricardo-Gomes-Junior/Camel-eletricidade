@@ -30,6 +30,7 @@ a {
   text-decoration: none;
 }
 
+
 /* === NAVIGATION HISTORIC ================================*/
 .historic {
   color: var(--gray-color);
@@ -41,6 +42,7 @@ a {
 
   margin-block: 2rem;
 }
+
 
 /* === HEADER ================================*/
 header {
@@ -63,11 +65,14 @@ header p {
   line-height: 1.5rem;
 }
 
+
 /* === SUB-CATEGORIES NAVIGATION ================================*/
 nav {
   margin: 3.2rem auto 6.5rem;
-  width: fit-content;
+  width: 100vw;
   padding-inline: 1.6rem;
+
+  overflow: hidden;
 }
 
 nav ul {
@@ -78,16 +83,21 @@ nav ul {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.5rem;
+
+  touch-action: none;
+  /* overflow: hidden; */
 }
 
 nav ul a {
   color: var(--orange-color);
 }
 
+
 /* === PRODUCTS ================================*/
 main {
   display: grid;
   grid-template-areas: 'A B';
+  padding-inline: .8rem;
 }
 
 main ul {
