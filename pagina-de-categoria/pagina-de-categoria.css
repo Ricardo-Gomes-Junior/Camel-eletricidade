@@ -221,6 +221,8 @@ main {
   display: grid;
   grid-template-areas: 'A B';
   padding-inline: .8rem;
+
+  margin-bottom: 5rem;
 }
 
 main ul {
@@ -258,4 +260,40 @@ main ul a li p.price {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.8rem;
+}
+
+
+/* === FOOTER ================================*/
+footer {
+  width: 100%;
+  background-color: var(--gray-color);
+  padding: 1rem;
+}
+
+footer .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+
+footer .top img {
+  width: 12rem;
+}
+
+footer .top p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--white-color);
+}
+
+footer .down {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin-block: 1.5rem;
 }
