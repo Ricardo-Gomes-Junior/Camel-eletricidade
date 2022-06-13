@@ -92,6 +92,20 @@ nav ul a {
   color: var(--orange-color);
 }
 
+/* FOCUS */
+nav ul a {
+  opacity: 0.5;
+  transition: ;
+}
+
+nav ul a.focus {
+  opacity: 1;
+  border-bottom: 2px solid var(--orange-color);
+  padding-bottom: 5px;
+}
+
+
+
 
 /* === PRODUCTS ================================*/
 main {
