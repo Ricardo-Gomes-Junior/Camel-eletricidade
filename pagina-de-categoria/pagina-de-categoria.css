@@ -17,7 +17,8 @@
   --main-header-height: 13rem;
 }
 
-body {
+body,
+html {
   background-color: var(--bg-primary-color);
 
   font-size: 1.6rem;
@@ -36,7 +37,6 @@ button {
   background: none;
   border: none;
 }
-
 
 /* === MAIN HEADER NAVIGATION ================================*/
 nav.main-header {
@@ -129,7 +129,7 @@ body.menu-expanded .menu {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  
+
   padding-block: 5rem;
 
   font-weight: 700;
@@ -142,7 +142,6 @@ body.menu-expanded .menu {
   text-decoration: none;
 }
 
-
 /* === NAVIGATION HISTORIC ================================*/
 .historic {
   color: var(--gray-color);
@@ -154,7 +153,6 @@ body.menu-expanded .menu {
 
   margin-block: 2rem;
 }
-
 
 /* === HEADER ================================*/
 header {
@@ -177,14 +175,11 @@ header p {
   line-height: 1.5rem;
 }
 
-
 /* === SUB-CATEGORIES NAVIGATION ================================*/
 nav.sub-categories-navigation {
   margin: 3.2rem auto 6.5rem;
   width: 100vw;
   padding-inline: 1.6rem;
-
-  overflow: hidden;
 }
 
 nav.sub-categories-navigation ul {
@@ -215,12 +210,11 @@ nav.sub-categories-navigation ul a.focus {
   padding-bottom: 5px;
 }
 
-
 /* === PRODUCTS ================================*/
 main {
   display: grid;
   grid-template-areas: 'A B';
-  padding-inline: .8rem;
+  padding-inline: 0.8rem;
 
   margin-bottom: 5rem;
 }
@@ -238,7 +232,7 @@ main ul {
 .product-img {
   width: 12rem;
   height: 12rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #d7d7d7;
 }
 
@@ -252,7 +246,7 @@ main ul li p.product-name {
   font-size: 1.4rem;
   line-height: 1.5rem;
 
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -261,7 +255,6 @@ main ul a li p.price {
   font-size: 1.5rem;
   line-height: 1.8rem;
 }
-
 
 /* === FOOTER ================================*/
 footer {
@@ -279,7 +272,6 @@ footer .top {
   margin-top: 1rem;
 }
 
-
 footer .top img {
   width: 12rem;
 }
@@ -296,4 +288,51 @@ footer .down {
   gap: 2rem;
 
   margin-block: 1.5rem;
+}
+
+/* === RESPONSIVIDADE ================================*/
+@media (min-width: 700px) {
+  /* === HEADER ================================*/
+  header {
+    max-width: 100rem;
+    margin: auto;
+  }
+
+
+  /* === SUB-CATEGORIES NAVIGATION ================================*/
+  nav.sub-categories-navigation ul {
+    justify-content: center;
+  }
+
+
+  /* === PRODUCTS ================================*/
+  main {
+    display: grid;
+    grid-template-areas: 
+    'A'
+    'B';
+    row-gap: 5rem;
+
+    padding-inline: 0.8rem;
+
+    margin-bottom: 5rem;
+  }
+
+  main ul {
+    margin: auto;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+
+  /* === FOOTER ================================*/
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
