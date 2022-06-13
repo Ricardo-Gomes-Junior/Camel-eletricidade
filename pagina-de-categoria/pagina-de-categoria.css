@@ -13,6 +13,8 @@
   --black-color: hsl(0, 0%, 5%);
   --gray-color: hsl(229, 19%, 22%);
   --orange-color: hsl(39, 96%, 48%);
+
+  --main-header-height: 13rem;
 }
 
 body {
@@ -27,6 +29,116 @@ ul {
 }
 
 a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+
+/* === MAIN HEADER NAVIGATION ================================*/
+nav.main-header {
+  height: var(--main-header-height);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--gray-color);
+}
+
+nav.main-header .top {
+  margin-block: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav.main-header .top .logo {
+  width: 8rem;
+}
+
+nav.main-header .top .shopping-cart {
+  width: 3.5rem;
+}
+
+nav.main-header .down {
+  margin-inline: auto;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+}
+
+nav.main-header .down span {
+  position: absolute;
+  display: flex;
+  left: 1rem;
+}
+
+nav.main-header .down input {
+  width: 100%;
+  padding: 0.6rem 5rem;
+}
+
+/*===== MAIN HEADER MENU EXPANDED ==================================*/
+body.menu-expanded > :not(.main-header) {
+  display: none;
+}
+
+.close-menu,
+body.menu-expanded .open-menu {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+body.menu-expanded .menu {
+  display: block;
+}
+
+body.menu-expanded .close-menu {
+  display: inline;
+}
+
+.menu {
+  transform: translateY(100%);
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  background: var(--orange-color);
+
+  transition: transform 300ms;
+  transform: translateY(0);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  
+  padding-block: 5rem;
+
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.menu ul li a {
+  color: var(--white-color);
   text-decoration: none;
 }
 
@@ -67,7 +179,7 @@ header p {
 
 
 /* === SUB-CATEGORIES NAVIGATION ================================*/
-nav {
+nav.sub-categories-navigation {
   margin: 3.2rem auto 6.5rem;
   width: 100vw;
   padding-inline: 1.6rem;
@@ -75,7 +187,7 @@ nav {
   overflow: hidden;
 }
 
-nav ul {
+nav.sub-categories-navigation ul {
   display: flex;
   gap: 4rem;
 
@@ -88,23 +200,20 @@ nav ul {
   /* overflow: hidden; */
 }
 
-nav ul a {
+nav.sub-categories-navigation ul a {
   color: var(--orange-color);
 }
 
 /* FOCUS */
-nav ul a {
+nav.sub-categories-navigation ul a {
   opacity: 0.5;
-  transition: ;
 }
 
-nav ul a.focus {
+nav.sub-categories-navigation ul a.focus {
   opacity: 1;
   border-bottom: 2px solid var(--orange-color);
   padding-bottom: 5px;
 }
-
-
 
 
 /* === PRODUCTS ================================*/
