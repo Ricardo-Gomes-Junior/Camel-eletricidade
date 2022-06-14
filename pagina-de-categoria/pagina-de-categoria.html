@@ -129,11 +129,21 @@
       </p>
     </header>
 
-    <nav class="sub-categories-navigation">
+    <!-- <nav class="sub-categories-navigation">
       <ul class="track">
         <a href="#" class="sub_cat_1 focus" onclick="focus1()"><li>Sub-categoria 1</li></a>
         <a href="#" class="sub_cat_2" onclick="focus2()"><li>Sub-categoria 2</li></a>
         <a href="#" class="sub_cat_3" onclick="focus3()"><li>Sub-categoria 3</li></a>
+      </ul>
+    </nav> -->
+
+    <nav class="embla">
+      <ul class="embla__container">
+        <a href="#"  class="sub_cat_1 focus embla__slide" onclick="focus1()"><li>Sub-categoria 1</li></a>
+        <a href="#" class="sub_cat_2 embla__slide" onclick="focus2()"><li>Sub-categoria 2</li></a>
+        <a href="#" class="sub_cat_3 embla__slide" onclick="focus3()"><li>Sub-categoria 3</li></a>
+        <a href="#" class="sub_cat_4 embla__slide" onclick="focus4()"><li>Sub-categoria 4</li></a>
+        <a href="#" class="sub_cat_5 embla__slide" onclick="focus5()"><li>Sub-categoria 5</li></a>
       </ul>
     </nav>
 
@@ -201,6 +211,8 @@
       </ul>
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
       <div class="top">
         <img
@@ -242,5 +254,12 @@
     
     <script src="./pagina-de-categoria.js"></script>
     <script src="../cabecalho/cabecalho.js"></script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script type="text/javascript">
+      var emblaNode = document.querySelector('.embla')
+      var options = { loop: false }
+      
+      var embla = EmblaCarousel(emblaNode, options)
+      </script>
   </body>
 </html>
