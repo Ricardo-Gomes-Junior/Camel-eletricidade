@@ -24,7 +24,6 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-
 /* === FOOTER ================================*/
 footer {
   width: 100%;
@@ -41,7 +40,6 @@ footer .top {
   margin-top: 1rem;
 }
 
-
 footer .top img {
   width: 12rem;
 }
@@ -55,18 +53,22 @@ footer .top p {
 footer .down {
   display: flex;
   align-items: center;
-  justify-content:;
+  justify-content: ;
   gap: 2rem;
 
   margin-block: 1.5rem;
 }
-
 
 /* === RESPONSIVIDADE FOOTER================================*/
 @media (min-width: 700px) {
   footer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    padding-inline: 8rem;
+
+    position: fixed;
+    bottom: 0;
   }
 }

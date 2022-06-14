@@ -338,9 +338,11 @@ footer .down {
   footer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    padding-inline: 8rem;
 
     position: fixed;
-    bottom: 0;
+    bottom: 0
   }
 }

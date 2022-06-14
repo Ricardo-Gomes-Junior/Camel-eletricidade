@@ -38,3 +38,5 @@ function focus5() {
   document.querySelector('.sub_cat_5').classList.add('focus')
 }
 
+
+
