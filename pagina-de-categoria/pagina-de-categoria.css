@@ -181,7 +181,7 @@ header p {
 /* EMBLA CAROUSEL */
 .embla {
   overflow: hidden;
-  
+
   margin-top: 3.2rem;
   margin-bottom: 6.5rem;
 }
@@ -194,7 +194,7 @@ header p {
 .embla__slide {
   position: relative;
   flex: 0 0 auto;
-  max-width: 100%; 
+  max-width: 100%;
 
   text-align: center;
   font-weight: 700;
@@ -203,13 +203,18 @@ header p {
   color: var(--orange-color);
 }
 
+nav.not_embla {
+  display: none;
+}
 
 /* FOCUS */
-nav.embla ul a {
+nav.embla ul a,
+nav.not_embla ul a {
   opacity: 0.5;
 }
 
-nav.embla ul a.focus {
+nav.embla ul a.focus,
+nav.not_embla ul a.focus {
   opacity: 1;
   border-bottom: 2px solid var(--orange-color);
   padding-bottom: 5px;
@@ -299,17 +304,55 @@ footer .down {
 
 /* === RESPONSIVIDADE ================================*/
 @media (min-width: 700px) {
+  /* === NAVIGATION HISTORIC ================================*/
+  .historic {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    margin: 2rem 0 6rem;
+  }
+
+  
   /* === HEADER ================================*/
   header {
     max-width: 100rem;
     margin: auto;
+    padding: 5rem;
+    border-radius: 3rem;
+  }
+
+  header h1 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 6.4rem;
+  }
+
+  header p {
+    font-size: 1.6rem;
+    line-height: 4rem;
   }
 
 
   /* === SUB-CATEGORIES NAVIGATION ================================*/
-  nav.sub-categories-navigation ul {
-    justify-content: center;
+  /* EMBLA CAROUSEL */
+  nav.embla {
+    display: none;
   }
+
+  nav.not_embla {
+    display: block;
+  }
+
+  nav.not_embla {
+    margin: 6.4rem auto 6.4rem;
+    max-width: fit-content;
+  }
+
+  .embla__slide {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
 
   /* === PRODUCTS ================================*/
   main {
@@ -334,6 +377,25 @@ footer .down {
     gap: 4rem;
   }
 
+  .product-img {
+    width: 18rem;
+    height: 20rem;
+    border-radius: 1rem;
+  }
+
+  main ul li p.product-name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    margin-block: 1rem;
+  }
+
+  main ul a li p.price {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+
   /* === FOOTER ================================*/
   footer {
     display: flex;
@@ -342,7 +404,7 @@ footer .down {
 
     padding-inline: 8rem;
 
-    position: fixed;
-    bottom: 0
+    /* position: fixed;
+    bottom: 0 */
   }
 }

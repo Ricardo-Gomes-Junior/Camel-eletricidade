@@ -140,9 +140,6 @@ body.menu-expanded .menu {
 
 /*===== RESPONSIVIDADE ==================================*/
 @media (min-width: 1024px) {
-  .close-menu, .open-menu {
-    display: none;
-  }
-
+  /*===== NAVIGATION ==================================*/
   
 }
