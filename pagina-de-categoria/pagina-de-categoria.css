@@ -222,21 +222,16 @@ nav.not_embla ul a.focus {
 
 /* === PRODUCTS ================================*/
 main {
-  display: grid;
-  grid-template-areas: 'A B';
+  margin: auto;
   padding-inline: 0.8rem;
-
-  margin-bottom: 5rem;
+  max-width: 76.8rem;
 }
 
-main ul {
+main ul.products_colums {
   margin: auto;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .product-img {
@@ -245,12 +240,16 @@ main ul {
   border-radius: 0.5rem;
   background-color: #d7d7d7;
 
+  margin: auto;
+
   background-size: cover;
 }
 
 main ul a {
   color: var(--black-color);
   text-align: center;
+
+  margin-bottom: 5rem;
 }
 
 main ul li p.product-name {
@@ -258,8 +257,7 @@ main ul li p.product-name {
   font-size: 1.4rem;
   line-height: 1.5rem;
 
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 1rem;
 }
 
 main ul a li p.price {
@@ -355,26 +353,8 @@ footer .down {
 
 
   /* === PRODUCTS ================================*/
-  main {
-    display: grid;
-    grid-template-areas:
-      'A'
-      'B';
-    row-gap: 5rem;
-
-    padding-inline: 0.8rem;
-
-    margin-bottom: 5rem;
-  }
-
-  main ul {
-    margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
+  main ul.products_colums {
+    grid-template-columns: 33% 33% 33%;
   }
 
   .product-img {
