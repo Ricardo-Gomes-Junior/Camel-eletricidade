@@ -218,6 +218,8 @@ nav.not_embla ul a.focus {
   opacity: 1;
   border-bottom: 2px solid var(--orange-color);
   padding-bottom: 5px;
+
+  width: fit-content;
 }
 
 /* === PRODUCTS ================================*/

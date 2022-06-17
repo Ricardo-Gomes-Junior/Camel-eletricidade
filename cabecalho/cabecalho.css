@@ -8,6 +8,7 @@
 :root {
   font-size: 62.5%;
 
+  --bg-primary-color: hsl(180, 8%, 92%);
   --gray-color: hsl(229, 19%, 22%);
   --white-color: hsl(0, 0%, 95%);
   --orange-color: hsl(39, 96%, 48%);
@@ -15,9 +16,10 @@
 
 body {
   font-size: 1.6rem;
-
   font-family: 'Inter', sans-serif;
-  overflow: overlay;
+
+  overflow: hidden;
+  background-color: var(--bg-primary-color);
 }
 
 button {
@@ -179,11 +181,12 @@ body.menu-expanded .menu {
   nav .down ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5rem;
   }
 
-  nav .down a {
+  nav .down a,
+  li.all {
     text-decoration: none;
     color: var(--white-color);
     font-weight: 800;
@@ -195,6 +198,30 @@ body.menu-expanded .menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
+
+    cursor: pointer;
+  }
+
+  nav .down li.all button {
+    cursor: pointer;
+  }
+
+  nav .down li.emphasis_categories {
+    display: flex;
+    gap: 5rem;
+
+    margin: auto;
+  }
+
+  /*===== MENU EXPANDED ==================================*/
+  .menu {
+    transform: translateX(-100%);
+    max-width: 30%;
+    margin-top: 18.5rem;
+  }
+
+  body.menu-expanded .menu {
+    transform: translateX(0);
   }
 }
