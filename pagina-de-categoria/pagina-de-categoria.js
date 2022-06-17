@@ -1,3 +1,14 @@
+/* === HEADER OF PAGE ================================*/
+function openMenu() {
+  document.body.classList.add('menu-expanded')
+}
+
+function closeMenu() {
+  document.body.classList.remove('menu-expanded')
+}
+
+
+/* === CATEGORIES PAGE ================================*/
 function focus1() {
   document.querySelector('.sub_cat_2').classList.remove('focus')
   document.querySelector('.sub_cat_3').classList.remove('focus')

@@ -14,7 +14,7 @@
   --gray-color: hsl(229, 19%, 22%);
   --orange-color: hsl(39, 96%, 48%);
 
-  --main-header-height: 13rem;
+  --header-of-page-dektop-margin: 23rem;
 }
 
 body,
@@ -40,9 +40,13 @@ button {
   border: none;
 }
 
-/* === MAIN HEADER NAVIGATION ================================*/
-nav.main-header {
-  height: var(--main-header-height);
+/*===== HEADER OF PAGE ==================================*/
+nav.desktop, body.menu-expanded nav.desktop {
+  display: none;
+}
+
+nav.mobile {
+  height: 13rem;
   width: 100%;
 
   display: flex;
@@ -51,23 +55,23 @@ nav.main-header {
   background-color: var(--gray-color);
 }
 
-nav.main-header .top {
-  margin-block: 1rem;
+nav .top {
+  padding-block: 1rem;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-nav.main-header .top .logo {
+nav .top .logo {
   width: 8rem;
 }
 
-nav.main-header .top .shopping-cart {
+nav .top .shopping-cart {
   width: 3.5rem;
 }
 
-nav.main-header .down {
+nav .search {
   margin-inline: auto;
 
   position: relative;
@@ -79,33 +83,31 @@ nav.main-header .down {
   width: 80%;
 }
 
-nav.main-header .down span {
+nav .search span {
   position: absolute;
   display: flex;
   left: 1rem;
 }
 
-nav.main-header .down input {
+nav .search input {
   width: 100%;
   padding: 0.6rem 5rem;
 }
 
-/*===== MAIN HEADER MENU EXPANDED ==================================*/
-body.menu-expanded > :not(.main-header) {
+/*===== MENU EXPANDED ==================================*/
+body.menu-expanded > :not(.mobile) {
   display: none;
 }
+
 
 .close-menu,
-body.menu-expanded .open-menu {
-  display: none;
-}
-
+body.menu-expanded .open-menu,
 .menu {
   display: none;
 }
 
 body.menu-expanded .menu {
-  display: block;
+  display: inherit;
 }
 
 body.menu-expanded .close-menu {
@@ -144,6 +146,122 @@ body.menu-expanded .menu {
   text-decoration: none;
 }
 
+/*===== RESPONSIVIDADE ==================================*/
+@media (min-width: 1024px) {
+  /*===== NAVIGATION ==================================*/
+  nav.mobile, body.menu-expanded nav.mobile {
+    display: none;
+  }
+
+  nav.desktop, body.menu-expanded nav.desktop {
+    display: block;
+    height: 0;
+  }
+
+  nav .top {
+    padding: 2.5rem 3rem;
+    height: 11rem;
+
+    background-color: var(--gray-color);
+  }
+
+  nav .top .logo {
+    width: 10rem;
+  }
+
+  nav .top .shopping-cart {
+    width: 4.5rem;
+  }
+
+  nav .search {
+    width: 60%;
+  }
+
+  nav .down {
+    background-color: var(--orange-color);
+
+    padding: 1.6rem;
+  }
+
+  nav .down ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  nav .down a,
+  li.all {
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  nav .down li.all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    cursor: pointer;
+  }
+
+  nav .down li.all button {
+    cursor: pointer;
+  }
+
+  nav .down li.emphasis_categories {
+    display: flex;
+    gap: 5rem;
+
+    margin: auto;
+  }
+
+  /*===== MENU EXPANDED ==================================*/
+  body.menu-expanded {
+    overflow-y: hidden;
+  }
+
+  body.menu-expanded > :not(.desktop) {
+    display: inherit;
+
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  body.menu-expanded nav.embla {
+    display: none;
+  }
+
+  body.menu-expanded .menu {
+    display: inherit;
+    position: absolute;
+
+    padding-inline: 20rem;
+    max-width: fit-content;
+    height: 70rem;
+
+    opacity: 1;
+    z-index: 1;
+
+    overflow-y: scroll;
+  }
+
+  .menu {
+    transform: translateX(-100%);
+    max-width: 30%;
+    margin-top: 18.5rem;
+  }
+
+  body.menu-expanded .menu {
+    transform: translateX(0);
+  }
+}
+
+/* === CETEGORIES PAGE ================================*/
+
 /* === NAVIGATION HISTORIC ================================*/
 .historic {
   color: var(--gray-color);
@@ -153,7 +271,7 @@ body.menu-expanded .menu {
   line-height: 1rem;
   text-align: center;
 
-  margin-block: 2rem;
+  margin: 2rem 0;
 }
 
 /* === HEADER ================================*/
@@ -268,40 +386,6 @@ main ul a li p.price {
   line-height: 1.8rem;
 }
 
-/* === FOOTER ================================*/
-footer {
-  width: 100%;
-  background-color: var(--gray-color);
-  padding: 1rem;
-}
-
-footer .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-
-  margin-top: 1rem;
-}
-
-footer .top img {
-  width: 12rem;
-}
-
-footer .top p {
-  font-size: 1rem;
-  line-height: 1.2rem;
-  color: var(--white-color);
-}
-
-footer .down {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  margin-block: 1.5rem;
-}
-
 /* === RESPONSIVIDADE ================================*/
 @media (min-width: 700px) {
   /* === NAVIGATION HISTORIC ================================*/
@@ -309,10 +393,9 @@ footer .down {
     font-size: 1.4rem;
     line-height: 2rem;
 
-    margin: 2rem 0 6rem;
+    margin: 23rem 0 6rem;
   }
 
-  
   /* === HEADER ================================*/
   header {
     max-width: 100rem;
@@ -331,7 +414,6 @@ footer .down {
     font-size: 1.6rem;
     line-height: 4rem;
   }
-
 
   /* === SUB-CATEGORIES NAVIGATION ================================*/
   /* EMBLA CAROUSEL */
@@ -352,7 +434,6 @@ footer .down {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
-
 
   /* === PRODUCTS ================================*/
   main ul.products_colums {
@@ -375,18 +456,5 @@ footer .down {
   main ul a li p.price {
     font-size: 1.8rem;
     line-height: 2.4rem;
-  }
-
-
-  /* === FOOTER ================================*/
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding-inline: 8rem;
-
-    /* position: fixed;
-    bottom: 0 */
   }
 }

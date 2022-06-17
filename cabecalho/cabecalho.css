@@ -31,12 +31,12 @@ ul {
   list-style: none;
 }
 
-/*===== NAVIGATION ==================================*/
-nav.desktop {
+/*===== HEADER OF PAGE ==================================*/
+nav.desktop, body.menu-expanded nav.desktop {
   display: none;
 }
 
-nav {
+nav.mobile {
   height: 13rem;
   width: 100%;
 
@@ -86,23 +86,19 @@ nav .search input {
 }
 
 /*===== MENU EXPANDED ==================================*/
-body.menu-expanded > :not(nav) {
-  visibility: none;
-}
-
-.close-menu,
-body.menu-expanded .open-menu {
+body.menu-expanded > :not(.mobile) {
   display: none;
 }
 
+
+.close-menu,
+body.menu-expanded .open-menu,
 .menu {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 body.menu-expanded .menu {
-  opacity: 1;
-  visibility: visible;
+  display: inherit;
 }
 
 body.menu-expanded .close-menu {
@@ -144,11 +140,11 @@ body.menu-expanded .menu {
 /*===== RESPONSIVIDADE ==================================*/
 @media (min-width: 1024px) {
   /*===== NAVIGATION ==================================*/
-  nav.mobile {
+  nav.mobile, body.menu-expanded nav.mobile {
     display: none;
   }
 
-  nav.desktop {
+  nav.desktop, body.menu-expanded nav.desktop {
     display: block;
     height: 0;
   }
@@ -215,6 +211,31 @@ body.menu-expanded .menu {
   }
 
   /*===== MENU EXPANDED ==================================*/
+  body.menu-expanded {
+    overflow-y: hidden;
+  }
+
+  body.menu-expanded > :not(.desktop) {
+    display: inherit;
+
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  body.menu-expanded .menu {
+    display: inherit;
+    position: absolute;
+
+    padding-inline: 20rem;
+    max-width: fit-content;
+    height: 70rem;
+
+    opacity: 1;
+    z-index: 1;
+
+    overflow-y: scroll;
+  }
+
   .menu {
     transform: translateX(-100%);
     max-width: 30%;
