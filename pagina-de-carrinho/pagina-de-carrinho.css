@@ -59,7 +59,8 @@ button {
   display: flex;
   justify-content: flex-end;
 
-  margin: 0 1.5rem 1.5rem 0;
+  margin-bottom: 1.5rem;
+  width: 95%;
 }
 
 .remove_all button {
@@ -76,12 +77,17 @@ button {
 }
 
 .product_list ul li.product_list_item {
-  display: grid;
-  grid-template-areas: 'A B B';
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 
   padding: 1.6rem;
   margin-bottom: 3.5rem;
   background-color: var(--white-color);
+}
+
+.product_list_item input {
+  cursor: pointer;
 }
 
 .product_list_item .img {
@@ -103,6 +109,13 @@ button {
   font-size: 1.2rem;
   line-height: 1.4rem;
   color: #6f6f6f;
+}
+
+.product_list select {
+  font-size: 1.2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border-color: var(--orange-color);
 }
 
 .product_list_item .remove {
@@ -127,12 +140,12 @@ button {
 .product_list_item .name_price_select_remove {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .product_list_item .price_select_remove {
   display: flex;
-  gap: 22%;
+  gap: 3rem;
 }
 
 .product_list_item .price_and_select {
@@ -141,14 +154,6 @@ button {
   gap: 1rem;
 }
 
-.product_list select {
-  font-size: 1.2rem;
-  height: 2rem;
-  border-radius: 0.5rem;
-  border-color: var(--orange-color);
-}
-
-/* =-=-= PRODUCT LIST =-=-= */
 .end {
   width: 90%;
   margin: auto;
@@ -165,7 +170,7 @@ button {
 .end .totalPrice_and_budgetButton {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .end .totalPrice {
@@ -180,7 +185,7 @@ button {
 
 .end button {
   background-color: var(--orange-color);
-  padding: .8rem 2.4rem;
+  padding: 0.8rem 2.4rem;
   border-radius: 1.5rem;
 
   color: var(--white-color);
@@ -188,4 +193,199 @@ button {
   font-size: 1rem;
   line-height: 1.2rem;
   text-align: center;
+}
+
+/* =-=-= RESPONSIVIDADE =-=-= */
+@media (min-width: 375px) {
+  /* =-=-= PRODUCT LIST =-=-= */
+  .product_list_item .price_select_remove {
+    gap: 7rem;
+  }
+
+  .product_list_item .price_and_select {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 425px) {
+  /* =-=-= PRODUCT LIST =-=-= */
+  .product_list_item .price_select_remove {
+    gap: 11rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* =-=-= REMOVE ALL =-=-= */
+  .remove_all {
+    width: 80%;
+  }
+
+  /* =-=-= PRODUCT LIST =-=-= */
+  .product_list,
+  .end {
+    width: 60%;
+  }
+
+  .product_list ul li.product_list_item {
+    gap: 2rem;
+  }
+
+  .product_list_item .price_select_remove {
+    gap: 17rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /*=-=-=  NAVIGATION HISTORIC  =-=-=*/
+  .historic {
+    font-size: 1.1rem;
+
+    margin: 3rem 0;
+  }
+
+  /* =-=-= REMOVE ALL =-=-= */
+  .remove_all {
+    margin-bottom: 2.5rem;
+  }
+
+  .remove_all button {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  /* =-=-= PRODUCT LIST =-=-= */
+  .product_list_item input {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .product_list_item .img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .product_list_item .product_name,
+  .product_list .product_price {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .product_list select {
+    font-size: 1.4rem;
+  }
+
+  .product_list_item .remove {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .product_list_item .price_select_remove {
+    gap: 23rem;
+  }
+
+  .product_list_item .checkbox_and_img {
+    gap: 1.6rem;
+  }
+
+  .product_list_item .name_price_select_remove {
+    gap: 4rem;
+  }
+
+  .end .totalPrice {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+
+  .end button {
+    padding: 1rem 2.6rem;
+    border-radius: 2rem;
+
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  /*=-=-=  NAVIGATION HISTORIC  =-=-=*/
+  .historic {
+    font-size: 1.2rem;
+  }
+
+  /* =-=-= REMOVE ALL =-=-= */
+  .remove_all {
+    margin-bottom: 4rem;
+    width: 75%;
+  }
+
+  .remove_all button {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  /* =-=-= PRODUCT LIST =-=-= */
+  .product_list {
+    width: 50%;
+  }
+
+  .product_list ul li.product_list_item {
+    gap: 4rem;
+  
+    padding: 2.2rem;
+    margin-bottom: 5rem;
+  }
+
+  .product_list_item input {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .product_list_item .img {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .product_list_item .product_name,
+  .product_list .product_price {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+
+  .product_list select {
+    font-size: 1.8rem;
+    height: 2.4rem;
+  }
+
+  .product_list_item .remove {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  
+  .product_list_item .checkbox_and_img {
+    gap: 1.6rem;
+  }
+
+  .product_list_item .name_price_select_remove {
+    gap: 6rem;
+  }
+  
+  .product_list_item .price_select_remove {
+    gap: 45rem;
+  }
+
+  .product_list_item .price_and_select {
+    gap: 3rem;
+  }
+
+  .end .totalPrice {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+
+  .end button {
+    padding: 1.5rem 3.1rem;
+    border-radius: 3rem;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 }

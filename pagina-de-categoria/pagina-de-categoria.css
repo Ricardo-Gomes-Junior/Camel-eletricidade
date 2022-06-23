@@ -387,7 +387,7 @@ main ul a li p.price {
 }
 
 /* === RESPONSIVIDADE ================================*/
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   /* === NAVIGATION HISTORIC ================================*/
   .historic {
     font-size: 1.4rem;
