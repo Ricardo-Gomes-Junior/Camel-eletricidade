@@ -38,10 +38,11 @@ a {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 /* === MAIN ================================*/
-/* === NAVIGATION HISTORIC ================================*/
+/*=-=-=  NAVIGATION HISTORIC  =-=-=*/
 .historic {
   color: var(--gray-color);
 
@@ -53,32 +54,34 @@ button {
   margin: 2rem 0;
 }
 
-/* === REMOVE ALL ================================*/
+/* =-=-= REMOVE ALL =-=-= */
 .remove_all {
   display: flex;
   justify-content: flex-end;
 
-  margin: 0 1.5rem 1rem 0;
+  margin: 0 1.5rem 1.5rem 0;
 }
 
 .remove_all button {
   font-weight: 900;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
   color: var(--orange-color);
 }
 
-/* === PRODUCT LIST ================================*/
+/* =-=-= PRODUCT LIST =-=-= */
 .product_list {
   width: 90%;
-  background-color: var(--white-color);
   margin: auto;
-  padding: 1.6rem;
 }
 
-.product_list ul li {
+.product_list ul li.product_list_item {
   display: grid;
   grid-template-areas: 'A B B';
+
+  padding: 1.6rem;
+  margin-bottom: 3.5rem;
+  background-color: var(--white-color);
 }
 
 .product_list_item .img {
@@ -104,8 +107,8 @@ button {
 
 .product_list_item .remove {
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.2rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
   text-decoration-line: underline;
   color: var(--orange-color);
 }
@@ -124,12 +127,65 @@ button {
 .product_list_item .name_price_select_remove {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .product_list_item .price_select_remove {
   display: flex;
-  gap: 8rem;
+  gap: 22%;
 }
 
+.product_list_item .price_and_select {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+.product_list select {
+  font-size: 1.2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border-color: var(--orange-color);
+}
+
+/* =-=-= PRODUCT LIST =-=-= */
+.end {
+  width: 90%;
+  margin: auto;
+}
+
+.end hr {
+  width: 80%;
+  margin: 0 auto 2rem;
+  border: none;
+  height: 0.15rem;
+  background-color: var(--gray-color);
+}
+
+.end .totalPrice_and_budgetButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.end .totalPrice {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: var(--black-color);
+}
+
+.end .totalPrice span {
+  font-weight: 800;
+}
+
+.end button {
+  background-color: var(--orange-color);
+  padding: .8rem 2.4rem;
+  border-radius: 1.5rem;
+
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
