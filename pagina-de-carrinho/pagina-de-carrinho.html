@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Carrinho</title>
+
+    <link rel="stylesheet" href="pagina-de-carrinho.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="historic">
+        <p>
+          Página Inicial > Categoria 1 > Sub-categoria 1 > Produto A > Carrinho
+        </p>
+      </section>
+
+      <div class="remove_all">
+        <button>Excluir Todos</button>
+      </div>
+
+      <section class="product_list">
+        <ul>
+          <li class="product_list_item">
+            
+            <div class="checkbox_and_img">
+              <input type="checkbox" />
+              <div class="img"></div>
+            </div>
+
+            <div class="name_price_select_remove">
+              <p class="product_name">NOME DO PRODUTO</p>
+
+              <div class="price_select_remove">
+
+                <div class="price_and_select">
+                  <p class="product_price">R$ 99,00</p>
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+
+                <button class="remove">Excluir</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="final_price"></section>
+    </main>
+  </body>
+</html>

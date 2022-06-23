@@ -1,0 +1,135 @@
+/* === GERAL ================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-primary-color: hsl(180, 8%, 92%);
+  --white-color: hsl(0, 0%, 95%);
+  --black-color: hsl(0, 0%, 5%);
+  --gray-color: hsl(229, 19%, 22%);
+  --orange-color: hsl(39, 96%, 48%);
+
+  --header-of-page-dektop-margin: 23rem;
+}
+
+body,
+html {
+  background-color: var(--bg-primary-color);
+
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+/* === MAIN ================================*/
+/* === NAVIGATION HISTORIC ================================*/
+.historic {
+  color: var(--gray-color);
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
+
+  margin: 2rem 0;
+}
+
+/* === REMOVE ALL ================================*/
+.remove_all {
+  display: flex;
+  justify-content: flex-end;
+
+  margin: 0 1.5rem 1rem 0;
+}
+
+.remove_all button {
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: var(--orange-color);
+}
+
+/* === PRODUCT LIST ================================*/
+.product_list {
+  width: 90%;
+  background-color: var(--white-color);
+  margin: auto;
+  padding: 1.6rem;
+}
+
+.product_list ul li {
+  display: grid;
+  grid-template-areas: 'A B B';
+}
+
+.product_list_item .img {
+  width: 7rem;
+  height: 7rem;
+  background-color: #c4c4c4;
+  border-radius: 0.5rem;
+}
+
+.product_list_item .product_name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: var(--black-color);
+}
+
+.product_list .product_price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #6f6f6f;
+}
+
+.product_list_item .remove {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-decoration-line: underline;
+  color: var(--orange-color);
+}
+
+.product_list_item {
+  display: flex;
+  gap: 1rem;
+}
+
+.product_list_item .checkbox_and_img {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.product_list_item .name_price_select_remove {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.product_list_item .price_select_remove {
+  display: flex;
+  gap: 8rem;
+}
+
+
