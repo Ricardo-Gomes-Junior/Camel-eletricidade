@@ -14,7 +14,16 @@
       rel="stylesheet"
     />
 
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/themes/splide-default.min.css"
+    />
   </head>
   <body>
     <!-- HEADER OF PAGE -->
@@ -231,45 +240,17 @@
       </p>
     </header>
 
-    <nav class="embla">
-      <ul class="embla__container">
-        <a href="#" class="sub_cat_1 focus embla__slide" onclick="focus1()"
-          ><li>Sub-categoria 1</li></a
-        >
-        <a href="#" class="sub_cat_2 embla__slide" onclick="focus2()"
-          ><li>Sub-categoria 2</li></a
-        >
-        <a href="#" class="sub_cat_3 embla__slide" onclick="focus3()"
-          ><li>Sub-categoria 3</li></a
-        >
-        <a href="#" class="sub_cat_4 embla__slide" onclick="focus4()"
-          ><li>Sub-categoria 4</li></a
-        >
-        <a href="#" class="sub_cat_5 embla__slide" onclick="focus5()"
-          ><li>Sub-categoria 5</li></a
-        >
-      </ul>
-    </nav>
-
-    <nav class="not_embla">
-      <ul class="embla__container">
-        <a href="#" class="sub_cat_1_r focus embla__slide" onclick="focus1()"
-          ><li>Sub-categoria 1</li></a
-        >
-        <a href="#" class="sub_cat_2_r embla__slide teste" onclick="focus2()"
-          ><li>Sub-categoria 2</li></a
-        >
-        <a href="#" class="sub_cat_3_r embla__slide" onclick="focus3()"
-          ><li>Sub-categoria 3</li></a
-        >
-        <a href="#" class="sub_cat_4_r embla__slide" onclick="focus4()"
-          ><li>Sub-categoria 4</li></a
-        >
-        <a href="#" class="sub_cat_5_r embla__slide" onclick="focus5()"
-          ><li>Sub-categoria 5</li></a
-        >
-      </ul>
-    </nav>
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">Sub-categoria 01</li>
+          <li class="splide__slide">Sub-categoria 02</li>
+          <li class="splide__slide">Sub-categoria 03</li>
+          <li class="splide__slide">Sub-categoria 04</li>
+          <li class="splide__slide">Sub-categoria 05</li>
+        </ul>
+      </div>
+    </div>
 
     <main>
       <ul class="products_colums">
@@ -372,14 +353,16 @@
     </footer>
 
     <script src="./pagina-de-categoria.js"></script>
-    <script src="../cabecalho/cabecalho.js"></script>
 
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script type="text/javascript">
-      var emblaNode = document.querySelector('.embla')
-      var options = { loop: false }
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+    <script>
+      var splide = new Splide('.splide', {
+        type: 'loop',
+        perPage: 3,
+        focus: 'center',
+      })
 
-      var embla = EmblaCarousel(emblaNode, options)
+      splide.mount()
     </script>
 
     <script

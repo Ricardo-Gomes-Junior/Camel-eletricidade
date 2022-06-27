@@ -41,7 +41,8 @@ button {
 }
 
 /*===== HEADER OF PAGE ==================================*/
-nav.desktop, body.menu-expanded nav.desktop {
+nav.desktop,
+body.menu-expanded nav.desktop {
   display: none;
 }
 
@@ -99,7 +100,6 @@ body.menu-expanded > :not(.mobile) {
   display: none;
 }
 
-
 .close-menu,
 body.menu-expanded .open-menu,
 .menu {
@@ -149,11 +149,13 @@ body.menu-expanded .menu {
 /*===== RESPONSIVIDADE ==================================*/
 @media (min-width: 1024px) {
   /*===== NAVIGATION ==================================*/
-  nav.mobile, body.menu-expanded nav.mobile {
+  nav.mobile,
+  body.menu-expanded nav.mobile {
     display: none;
   }
 
-  nav.desktop, body.menu-expanded nav.desktop {
+  nav.desktop,
+  body.menu-expanded nav.desktop {
     display: block;
     height: 0;
   }
@@ -296,48 +298,32 @@ header p {
 }
 
 /* === SUB-CATEGORIES NAVIGATION ================================*/
-/* EMBLA CAROUSEL */
-.embla {
-  overflow: hidden;
-
-  margin-top: 3.2rem;
-  margin-bottom: 6.5rem;
+/* SPLIDE CAROUSEL */
+.splide {
+  margin: 3rem auto 8rem;
+  max-width: 100rem;
 }
 
-.embla__container {
-  display: flex;
-  gap: 4rem;
-}
-
-.embla__slide {
-  position: relative;
-  flex: 0 0 auto;
-  max-width: 100%;
-
+.splide__slide {
   text-align: center;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--orange-color);
-}
+  color: hsl(39, 96%, 48%);
+  font-family: 'Inter', sans-serif;
 
-nav.not_embla {
-  display: none;
-}
-
-/* FOCUS */
-nav.embla ul a,
-nav.not_embla ul a {
   opacity: 0.5;
 }
 
-nav.embla ul a.focus,
-nav.not_embla ul a.focus {
-  opacity: 1;
-  border-bottom: 2px solid var(--orange-color);
-  padding-bottom: 5px;
+.splide__pagination {
+  top: 4rem;
+}
 
-  width: fit-content;
+/* FOCUS */
+.splide__slide.is-active {
+  opacity: 1;
+  border-bottom: 0.2rem solid hsl(39, 96%, 48%);
+  padding-bottom: 0.5rem;
 }
 
 /* === PRODUCTS ================================*/
@@ -393,7 +379,7 @@ main ul a li p.price {
     font-size: 1.4rem;
     line-height: 2rem;
 
-    margin: 23rem 0 6rem;
+    margin: 2rem 0 6rem;
   }
 
   /* === HEADER ================================*/
@@ -416,23 +402,21 @@ main ul a li p.price {
   }
 
   /* === SUB-CATEGORIES NAVIGATION ================================*/
-  /* EMBLA CAROUSEL */
-  nav.embla {
-    display: none;
+  /* SPLIDE CAROUSEL */
+  .splide {
+    margin: 10rem auto;
+    max-width: 100rem;
   }
 
-  nav.not_embla {
-    display: block;
+  .splide__slide {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
-  nav.not_embla {
-    margin: 6.4rem auto 6.4rem;
-    max-width: fit-content;
-  }
-
-  .embla__slide {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+  /* FOCUS */
+  .splide__slide.is-active {
+    border-bottom: .3rem solid hsl(39, 96%, 48%);
+    padding-bottom: 1rem;
   }
 
   /* === PRODUCTS ================================*/
@@ -459,60 +443,63 @@ main ul a li p.price {
   }
 }
 
-
-  /* === FOOTER OF PAGE ================================*/
-  footer {
-    width: 100%;
-    background-color: var(--gray-color);
-    padding: 1rem;
-    bottom: 0px;
+@media (min-width: 1024px) {
+  /* === NAVIGATION HISTORIC ================================*/
+  .historic {
+    margin: 23rem 0 6rem;
   }
-  
-  footer .top {
+}
+
+/* === FOOTER OF PAGE ================================*/
+footer {
+  width: 100%;
+  background-color: var(--gray-color);
+  padding: 1rem;
+  bottom: 0px;
+}
+
+footer .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+footer .top img {
+  width: 12rem;
+}
+
+footer .top p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--white-color);
+}
+
+footer .down {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin-block: 1.5rem;
+}
+
+.fa-brands {
+  color: gray;
+  padding: 10px;
+}
+
+.fa-solid {
+  color: gray;
+  padding: 10px;
+}
+
+/* === RESPONSIVIDADE FOOTER================================*/
+@media (min-width: 700px) {
+  footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 2rem;
-  
-    margin-top: 1rem;
   }
-  
-  
-  footer .top img {
-    width: 12rem;
-  }
-  
-  footer .top p {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    color: var(--white-color);
-  }
-  
-  footer .down {
-    display: flex;
-    align-items: center;
-    justify-content:;
-    gap: 2rem;
-  
-    margin-block: 1.5rem;
-  }
-
-  .fa-brands{
-    color: gray;
-    padding: 10px;
-  }
-
-  .fa-solid{
-    color: gray;
-    padding: 10px;
-  }
-  
-  
-  /* === RESPONSIVIDADE FOOTER================================*/
-  @media (min-width: 700px) {
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-  }
+}
