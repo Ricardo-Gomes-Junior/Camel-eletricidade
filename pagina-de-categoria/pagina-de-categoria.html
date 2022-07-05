@@ -16,7 +16,7 @@
 
     <link
       rel="shortcut icon"
-      href="../assets/favicon.ico"
+      href="./imgs/favicon.ico"
       type="image/x-icon"
     />
 
@@ -26,16 +26,16 @@
     />
   </head>
   <body>
-    <!-- HEADER OF PAGE -->
+    <!-- HEADER DA PAGE -->
     <nav class="desktop">
       <div class="top">
         <a onclick="closeMenu()" href="../pagina-home/pagina-home.html">
-          <img class="logo" src="../assets/Logo.png" alt="Logo da camel" />
+          <img class="logo" src="./imgs/Logo.png" alt="Logo da camel" />
         </a>
 
         <div class="search">
           <span
-            ><img src="../assets/search.png" alt="icone de uma lupa"
+            ><img src="./imgs/search.png" alt="icone de uma lupa"
           /></span>
           <input type="text" placeholder="Procure na Camel" />
         </div>
@@ -46,7 +46,7 @@
         >
           <img
             class="shopping-cart"
-            src="../assets/carrinho-de-compras.png"
+            src="./imgs/carrinho-de-compras.png"
             alt="Imagem de carrinho de compras"
           />
         </a>
@@ -191,7 +191,7 @@
         </button>
 
         <a onclick="closeMenu()" href="../pagina-home/pagina-home.html">
-          <img class="logo" src="../assets/Logo.png" alt="Logo da camel" />
+          <img class="logo" src="./imgs/Logo.png" alt="Logo da camel" />
         </a>
 
         <a
@@ -200,14 +200,14 @@
         >
           <img
             class="shopping-cart"
-            src="../assets/carrinho-de-compras.png"
+            src="./imgs/carrinho-de-compras.png"
             alt="Imagem de carrinho de compras"
           />
         </a>
       </div>
 
       <div class="search">
-        <span><img src="../assets/search.png" alt="icone de uma lupa" /></span>
+        <span><img src="./imgs/search.png" alt="icone de uma lupa" /></span>
         <input type="text" placeholder="Procure na Camel" />
       </div>
     </nav>
@@ -243,17 +243,73 @@
     <div class="splide" role="group" aria-label="Splide Basic HTML Example">
       <div class="splide__track">
         <ul class="splide__list">
-          <li class="splide__slide s1">Sub-categoria 01</li>
-          <li class="splide__slide s2">Sub-categoria 02</li>
-          <li class="splide__slide s3">Sub-categoria 03</li>
-          <li class="splide__slide s4">Sub-categoria 04</li>
-          <li class="splide__slide s5">Sub-categoria 05</li>
+          <li class="splide__slide">Sub-categoria 01</li>
+          <li class="splide__slide">Sub-categoria 02</li>
+          <li class="splide__slide">Sub-categoria 03</li>
+          <li class="splide__slide">Sub-categoria 04</li>
+          <li class="splide__slide">Sub-categoria 05</li>
         </ul>
       </div>
     </div>
 
     <main>
       <ul class="products_colums">
+        <a href="../pagina-de-produto/pagina-de-produto.html">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <div class="product-img"></div>
+            <p class="product-name">Nome do Produto</p>
+            <p class="price">R$ 99,00</p>
+          </li>
+        </a>
         <a href="#">
           <li>
             <div class="product-img"></div>
@@ -267,7 +323,7 @@
     <!-- FOOTER OF PAGE  -->
     <footer>
       <div class="top">
-        <img src="../assets/Logo.png" alt="logo" />
+        <img src="./imgs/Logo.png" alt="logo" />
         <p>
           ©2022 - CAMEL ELETRICIDADE. <br /><br />
           Todos os direitos reservados.
@@ -303,7 +359,7 @@
       var splide = new Splide('.splide', {
         type: 'loop',
         perPage: 3,
-        focus: 'center'
+        focus: 'center',
       })
 
       splide.mount()
