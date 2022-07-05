@@ -17,7 +17,7 @@
 
 <p>
   Esse projeto está sendo desenvolvido para a CAMEL Eletricidade, uma empresa distribuidora de materiais eletricos da minha região, durante
-  a minha graduação em Análise e Desenvolvimento de Sistemas.
+  a minha graduação em Análise e Desenvolvimento de Sistemas, juntamente com mais 5 pessoas.
 </p>
 
 <p>
